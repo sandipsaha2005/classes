@@ -12,7 +12,7 @@ export const serveLogin = async (req) => {
   const cookie = await parseCookie(req);
 
   const headers = new Headers();
-  if (!knownUsers.includes(cookie.username)) {
+  if (!cookie.username) {
     return await servePage("index");
   }
 
