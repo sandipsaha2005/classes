@@ -64,7 +64,7 @@ export const logout = async () => {
 };
 
 const parseCookie = async (req) => {
-  const cookie = await req.headers.get("cookie");
+  const cookie = await req.headers.get("cookie") || "";
   return Object.fromEntries(cookie.split(";").map((c) => c.trim().split("=")));
 };
 
