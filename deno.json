@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "pull": "git pull && git pull origin paulami && git pull origin sagnik && git pull origin abhay && git push"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}
